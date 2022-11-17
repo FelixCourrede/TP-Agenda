@@ -24,13 +24,13 @@ public class FixedTerminationEvent extends RepetitiveEvent {
     public LocalDate getTerminationDate() {
         if(fin==null){
             if (freq==ChronoUnit.DAYS){
-                fin=this.myStart.toLocalDate().plusDays(iter);
+                fin=this.myStart.toLocalDate().plusDays(iter-1);
             }
             if (freq==ChronoUnit.WEEKS){
-                fin=this.myStart.toLocalDate().plusWeeks(iter);
+                fin=this.myStart.toLocalDate().plusWeeks(iter-1);
             }
             if (freq==ChronoUnit.MONTHS){
-                fin=this.myStart.toLocalDate().plusMonths(iter);
+                fin=this.myStart.toLocalDate().plusMonths(iter-1);
             }
         }
         
@@ -52,5 +52,5 @@ public class FixedTerminationEvent extends RepetitiveEvent {
         }
         return (iter);
     }
-
 }
+

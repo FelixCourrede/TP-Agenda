@@ -37,8 +37,7 @@ public class RepetitiveEvent extends Event {
                 }
             }
             if (freq == ChronoUnit.WEEKS) {
-                if (aDay.isAfter(myStart.toLocalDate()) == true
-                        && (myStart.toLocalDate().until(aDay).getDays() % 7 == 0)) {
+                if (aDay.isAfter(myStart.toLocalDate()) == true && myStart.toLocalDate().getDayOfWeek() == aDay.getDayOfWeek()) {
                     return (true);
                 }
             }
