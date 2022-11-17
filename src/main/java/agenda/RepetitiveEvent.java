@@ -8,8 +8,8 @@ import java.time.temporal.ChronoUnit;
  * Description : A repetitive Event
  */
 public class RepetitiveEvent extends Event {
-    ChronoUnit freq;
-    ArrayList<LocalDate> exception = new ArrayList<LocalDate>();
+    protected ChronoUnit freq;
+    protected ArrayList<LocalDate> exception = new ArrayList<LocalDate>();
 
     public RepetitiveEvent(String title, LocalDateTime start, Duration duration, ChronoUnit frequency) {
         super(title, start, duration);
