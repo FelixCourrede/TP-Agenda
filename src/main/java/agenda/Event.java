@@ -36,6 +36,11 @@ public class Event {
         LocalDate jourEvent = myStart.toLocalDate();
         if (aDay.equals(jourEvent)) {
             return (true);
+        } else {
+            if ((myStart.plus(myDuration)).getDayOfWeek() != myStart.getDayOfWeek()
+                    && (aDay).equals(jourEvent.plusDays(1))) {
+                return (true);
+            }
         }
         return (false);
     }
