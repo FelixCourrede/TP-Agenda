@@ -5,11 +5,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
-/**
- * Description : A repetitive event that terminates after a given date, or after
- * a given number of occurrences
- */
 public class FixedTerminationEvent extends RepetitiveEvent {
+    LocalDate fin;
 
     /**
      * Constructs a fixed terminationInclusive event ending at a given date
@@ -29,8 +26,7 @@ public class FixedTerminationEvent extends RepetitiveEvent {
     public FixedTerminationEvent(String title, LocalDateTime start, Duration duration, ChronoUnit frequency,
             LocalDate terminationInclusive) {
         super(title, start, duration, frequency);
-
-        throw new UnsupportedOperationException("Pas encore implémenté");
+        fin = terminationInclusive;
 
     }
 
