@@ -57,4 +57,8 @@ public class Event {
         return myDuration;
     }
 
+    public String toString() {
+        return (myTitle);
+    }
+
 }
