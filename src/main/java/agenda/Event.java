@@ -4,28 +4,12 @@ import java.time.*;
 
 public class Event {
 
-    /**
-     * The myTitle of this event
-     */
-    private String myTitle;
+    protected String myTitle;
 
-    /**
-     * The starting time of the event
-     */
-    private LocalDateTime myStart;
+    protected LocalDateTime myStart;
 
-    /**
-     * The durarion of the event
-     */
-    private Duration myDuration;
+    protected Duration myDuration;
 
-    /**
-     * Constructs an event
-     *
-     * @param title    the title of this event
-     * @param start    the start time of this event
-     * @param duration the duration of this event
-     */
     public Event(String title, LocalDateTime start, Duration duration) {
         this.myTitle = title;
         this.myStart = start;
