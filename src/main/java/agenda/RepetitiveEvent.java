@@ -4,9 +4,6 @@ import java.util.*;
 import java.time.*;
 import java.time.temporal.ChronoUnit;
 
-/**
- * Description : A repetitive Event
- */
 public class RepetitiveEvent extends Event {
     protected ChronoUnit freq;
     protected ArrayList<LocalDate> exception = new ArrayList<LocalDate>();
